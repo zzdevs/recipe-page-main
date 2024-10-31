@@ -1,0 +1,163 @@
+/* outfit-latin-wght-normal */
+@font-face {
+  font-family: 'Outfit Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/outfit:vf@latest/latin-wght-normal.woff2)
+    format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* young-serif-latin-400-normal */
+@font-face {
+  font-family: 'Young Serif';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/young-serif@latest/latin-400-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/young-serif@latest/latin-400-normal.woff)
+      format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+  min-height: 100dvh;
+  background-color: hsl(330, 100%, 98%);
+  display: grid;
+  grid-template-rows: 1fr 10vh;
+  gap: 50px;
+  place-content: center;
+}
+
+.recipe {
+  width: 100vw;
+  max-width: 760px;
+  font-family: 'Outfit Variable';
+  background-color: white;
+  color: hsl(30, 10%, 34%);
+  line-height: 140%;
+  cursor: default;
+}
+.recipe div {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.recipe h1,
+.recipe h2 {
+  font-family: 'Young Serif';
+  color: hsl(14, 45%, 36%);
+  font-size: 1.8rem;
+}
+span {
+  color: hsl(14, 45%, 36%);
+  font-weight: 800;
+}
+.recipe h1 {
+  font-size: 2.3rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: hsl(24, 5%, 18%);
+}
+
+.recipe img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.timeSection {
+  background-color: hsl(330, 100%, 98%);
+  padding: 1.5rem 0 0 1.5rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  border-bottom: none;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: hsl(332, 51%, 32%);
+}
+.listPoint {
+  font-size: 1.5rem;
+  color: hsl(30, 10%, 34%);
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+section ul {
+  padding: 1rem 0.5rem;
+}
+section li {
+  display: flex;
+  align-items: center;
+}
+section p {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+}
+.instructions ol {
+  padding: 1rem 0;
+}
+.instructions li {
+  padding: 0.5rem 0;
+  align-items: normal;
+}
+.instructions li p {
+  padding: 0 1rem;
+}
+.nutrition {
+  padding: 1rem 0;
+}
+.nutrition p {
+  padding: 1rem 1rem 1rem 0;
+}
+.nutrition ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+.nutrition ul li:not(:last-child) {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.nutrition ul li p {
+  align-items: flex-start;
+}
+.nutrition ul li span {
+  width: 50%;
+  align-items: flex-start;
+}
+
+@media (width > 760px) {
+  body {
+    padding: 4rem 0;
+  }
+  .recipe {
+    border-radius: 2rem;
+    padding: 2rem;
+  }
+  .image {
+    padding: 1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+}
